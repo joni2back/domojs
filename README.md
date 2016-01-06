@@ -1,2 +1,10 @@
 # domojs
-handle my house lights with arduino
+-----
+
+### Usage
+
+```git clone https://github.com/joni2back/domojs.git```
+
+```npm install```
+
+```DEBUG="domojs" npm start```

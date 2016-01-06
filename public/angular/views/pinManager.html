@@ -1,0 +1,18 @@
+<section class="ng-cloak">
+	<h3>Pin manager</h3>
+
+	<div class="text-center" ng-show="requesting">Loading</div>
+
+	<div ng-hide="requesting">
+		<ul class="product-list">
+		    <li data-ng-repeat="pin in pins | orderBy: orderProp">
+                {{pin.id}} <a ng-click="pin.toggle()" href="">{{pin.active ? 'Off':'On'}}</a> 
+                <span class="badge" ng-show="pin.requesting">Loading...</span>
+		    </li>
+		</ul>
+
+        <div class="alert alert-warning" ng-show="!pins.length">
+            <i>No pins defined.</i>
+        </div>
+	</div>
+</section>
