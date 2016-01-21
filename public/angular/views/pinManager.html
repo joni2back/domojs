@@ -4,12 +4,13 @@
 	<div class="text-center" ng-show="requesting">Loading</div>
 
 	<div ng-hide="requesting">
-		<ul class="product-list">
-		    <li data-ng-repeat="pin in pins | orderBy: orderProp">
-                {{pin.id}} <a ng-click="pin.toggle()" href="">{{pin.active ? 'Off':'On'}}</a> 
-                <span class="badge" ng-show="pin.requesting">Loading...</span>
-		    </li>
-		</ul>
+		<div class="row pin-list">
+		    <div class="col-md-2 col-sm-2 col-xs-3" data-ng-repeat="pin in pins | orderBy: orderProp">
+                <button class="btn btn-block" ng-class="pin.active ? 'btn-success':'btn-danger'" ng-disabled="pin.requesting" ng-click="pin.toggle()">
+                    {{pin.id}} | {{pin.active ? 'Off':'On'}}
+                </button>
+		    </div>
+		</div>
 
         <div class="alert alert-warning" ng-show="!pins.length">
             <i>No pins defined.</i>

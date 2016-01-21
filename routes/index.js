@@ -30,30 +30,19 @@ router.get('/', function(req, res, next) {
   res.render('index', { });
 });
 
-
-
-
-
-
 router.post('/pin/manage/:id', function(req, res) {
     var id = req.param('id');
     var active = req.body.active;
 
     console.info('changing status of pin: ' + id + ' to: ' + active);
+    
+    var done = false;
     if (id && typeof active !== 'undefined') {
-      valid = true;
+      done = true;
     }
 
-    var done = valid;
-      console.info('ready board');
-      // Create an Led on pin 13
-      
-      // Blink every half second
-      active ? led13.on() : led13.off();
-
-
-
-    res.send(!!done);
+    active ? leds[id].on() : leds[id].off();
+    res.send(done);
 });
 
 

@@ -21,22 +21,10 @@ section > h3 {
     border-radius: 0!important;
 }
 
-ul.product-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.product-list li {
-    margin-bottom: 15px;
-}
-
-.comment-form h4 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #ccc;
-}
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+.pin-list button {
+  margin-bottom:1em;
 }

@@ -7,7 +7,7 @@
         $scope.requesting = false;
 
         $scope.listPins = function() {
-            $scope.pins = [1,2,3,4,5,6,7,8,9,10,11,12,13].map(function(id) {
+            $scope.pins = [1,2,3,4,5,6,7,8,9,10,11,12].map(function(id) {
                 return new Pin({id: id});
             });
         };
@@ -16,6 +16,5 @@
             $scope.listPins();
         });
         
-        window.scope=$scope;
     }]);
 })(angular);
